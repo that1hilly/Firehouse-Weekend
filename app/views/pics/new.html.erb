@@ -3,7 +3,10 @@
 	<h1> Upload Your Pic </h1>
 
 		<%= simple_form_for @pic do |f| %>
+
 		<%= f.input :hour, label: "Duration of Study" %> </br>
+
+		<%= f.input :image, :as => :file %> </br>
 
 		<%= f.input :emotion, label: "How you feeling?"%> </br>
 
