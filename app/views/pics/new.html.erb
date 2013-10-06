@@ -1,8 +1,11 @@
+<div class = 'span6 offset3 custom-font-3'>
+
 <h1> Upload Your Pic </h1>
 
 <%= simple_form_for @pic do |f| %>
 	<%= f.input :hour %>
 	<%= f.input :emotion %>
 	<%= f.input :learned %>
-	<%= submit_tag "SAVE" %>
+	<%= submit_tag "Save Pics", :class => ('btn btn-large btn-success') %>
 <% end %>
+</div>

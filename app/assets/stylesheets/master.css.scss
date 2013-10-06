@@ -7,6 +7,13 @@ body {
 
 }
 
+.stolen-surfbox {
+box-shadow: 2px -2px 2px 2px rgba(36,32,33,0.50);
+background-color: 
+rgba(36,32,33,0.50);
+padding: 1%;
+}
+
 
 .custom-font-1 {
 font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
@@ -15,8 +22,15 @@ font-size: 64px;
 color: white;
 }
 
+.custom-font-3 {
+font-family: Arial Bold;
+font-weight: 350;
+font-size: 20x;
+color: yellow;
+}
+
  .custom-font-2 {
-font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+font-family: Times New Roman;
 font-weight: 500;
 font-size: 14px;
 color: white;
