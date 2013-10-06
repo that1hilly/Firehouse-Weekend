@@ -20,7 +20,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <%= link_to 'Firehose', root_path, :class => 'brand' %> 
+      <%= link_to 'Hilly travels abroad', root_path, :class => 'brand' %> 
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -37,13 +37,36 @@
         <li>
         <%= link_to 'New Addition', new_pic_path %> 
         </li> 
+        <% if current_user.present? %>
+         <li>
+        <%= link_to current_user.email, '#' %>
+        </li>
+        <li>
+        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+        </li>
+        <% else %>
+        <li>
+        <%= link_to 'Sign In', new_user_session_path %>
+        </li>
+ 
+        <li>
+        <%= link_to 'Sign Up',
+        new_user_registration_path %>
+        </li>
+          <% end %>
 
       </div>
  
     </div>
   </div>
 </div>
+<% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+<% end %>
 
+<% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+<% end %>
 <%= yield %>
 
 </body>
